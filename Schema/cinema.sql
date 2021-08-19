@@ -4,7 +4,7 @@ CREATE DATABASE cinema;
 USE cinema;
 
 CREATE TABLE movies (
-	moviename_id VARCHAR(70),
+	moviename_id VARCHAR(70) AUTO_INCREMENT,
 	movie_genre VARCHAR(50) NOT NULL,
 	movie_price DECIMAL NOT NULL,
     movie_rating DECIMAL NOT NULL,
