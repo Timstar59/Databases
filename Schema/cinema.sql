@@ -4,7 +4,7 @@ CREATE DATABASE cinema;
 USE cinema;
 
 CREATE TABLE movies (
-	moviename_id VARCHAR(70) AUTO_INCREMENT,
+	moviename_id VARCHAR(70),
 	movie_genre VARCHAR(50) NOT NULL,
 	movie_price DECIMAL NOT NULL,
     movie_rating DECIMAL NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE  film_booking (
 	movie_restrictions VARCHAR(70),
 	movie_avaliabilty DATETIME NOT NULL,
     premium_seats BOOLEAN,
-    fk_moviename_id VARCHAR(70) AUTO_INCREMENT,
+    fk_moviename_id VARCHAR(70),
 	PRIMARY KEY (booking_price_id),
     FOREIGN KEY (fk_customer_id) REFERENCES customer(customer_id),
     FOREIGN KEY (fk_moviename_id) REFERENCES movies(moviename_id) 	
