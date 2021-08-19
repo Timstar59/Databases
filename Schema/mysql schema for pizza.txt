@@ -1,0 +1,45 @@
+Create your table
+
+<put your own stuff here pls>
+---
+CREATE TABLE pizza_table (
+	pizza_id INT AUTO_INCREMENT,
+	price DECIMAL NOT NULL,
+	vegetarian BOOLEAN NOT NULL,
+	PRIMARY KEY (pizza_id)
+);
+
+
+CREATE TABLE customer (
+	customer_id INT, 
+	customer_name VARCHAR(50),
+	customer_address VARCHAR(70),
+	new_memeber BOOLEAN,
+	PRIMARY KEY (customer_id)	
+);
+
+CREATE TABLE orders (
+	order_id INT AUTO_INCREMENT,
+	fk_pizza_id INT,
+	date_booking DATETIME NOT NULL, 
+	PRIMARY KEY (order_id),
+	FOREIGN KEY (fk_pizza_id) REFERENCES pizza_table(pizza_id)
+);
+---
+
+If creating a table with a foreign key, the table it is referencing MUST BE CREATED FIRST
+
+create a database with
+CREATE DATABASE <database_name>;
+
+Shows databases
+SHOW DATABASES; 
+
+use the new database
+USE <database_name>
+
+shows current tables
+SHOW TABLES;
+
+Shows the schema of a table
+DESCRIBE <table_name>
