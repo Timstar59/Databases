@@ -21,7 +21,7 @@ CREATE TABLE customer (
 
 CREATE TABLE  film_booking (
 	booking_price_id DECIMAL, 
-	fk_customer_id VARCHAR(50),
+	fk_customer_id INT,
 	movie_restrictions VARCHAR(70),
 	movie_avaliabilty DATETIME NOT NULL,
     premium_seats BOOLEAN,
