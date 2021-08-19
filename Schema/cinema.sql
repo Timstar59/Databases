@@ -27,7 +27,7 @@ CREATE TABLE  film_booking (
     premium_seats BOOLEAN,
     fk_moviename_id VARCHAR(70) AUTO_INCREMENT,
 	PRIMARY KEY (booking_price_id),
-    FOREIGN KEY (fk_customer_id) REFRENCES customer (customer_id),
-    FOREIGN KEY (fk_moviename_id) REFRENCES movies (moviename_id) 	
+    FOREIGN KEY (fk_customer_id) REFRENCES customer(customer_id),
+    FOREIGN KEY (fk_moviename_id) REFRENCES movies(moviename_id) 	
 );
 
